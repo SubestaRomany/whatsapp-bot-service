@@ -1,7 +1,7 @@
 const express = require("express");
 const axios = require("axios");
 const { GoogleSpreadsheet } = require("google-spreadsheet");
-const creds = require("./creds.json");
+const creds = JSON.parse(process.env.CREDS_JSON);
 
 const app = express();
 app.use(express.json());
